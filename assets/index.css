@@ -1,0 +1,121 @@
+#todo-container {
+    background: white;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 200px;
+}
+
+#todo-container .todo-add-item {
+
+}
+
+.todo-add-item .item-box {
+    padding: 10px 10px;
+}
+
+.todo-add-item .item-box .item-checkbox {
+    display: flex;
+}
+
+.todo-add-item .item-box input {
+    display: flex;
+    margin-left: 5px;
+    border: none;
+    border-left: 1px solid rgb(190, 190, 11);
+    padding-left: 10px;
+    outline: none;
+}
+
+/* Customize the label (the container) */
+.container {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 25px;
+  padding-right: 5px;
+  border-right: 1px solid rgb(190, 190, 11);
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+/* ITEMS */
+.todo-item-box {
+    padding: 5px 10px;
+}
+
+.todo-item-box .item-box .item-checkbox {
+    display: flex;
+}
+
+.todo-item-box .item-box .item-checkbox .todo-item-label {
+    font-size: 0.9em;
+    margin-left: 5px;
+    border: none;
+    border-left: 1px solid rgb(190, 190, 11);
+    padding-left: 10px;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+}
+.todo-item-box .item-box .item-checkbox .todo-item-label div {
+    margin-top: 5px;
+}
